@@ -48,7 +48,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => UrlRule::class, 'controller' => 'post']//['class' => UrlRule::class, 'controller' => ['p' => 'post']] // http://localhost:8081/demorest/frontend/web/p -- http://localhost:8081/demorest/frontend/web/posts
+                ['class' => UrlRule::class, 'controller' => ['post', 'comment']]//['class' => UrlRule::class, 'controller' => ['p' => 'post']] // http://localhost:8081/demorest/frontend/web/p -- http://localhost:8081/demorest/frontend/web/posts
             ],
         ],
         
