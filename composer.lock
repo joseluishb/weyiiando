@@ -4,8 +4,150 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50114089d7de41b6fbcc4d646295169a",
+    "content-hash": "f0aa71e31ff1e7a6c6832216eba59753",
     "packages": [
+        {
+            "name": "aki/yii2-app-vue",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/akbarjoudi/yii2-app-vue.git",
+                "reference": "c4ea332828b35d9e5fb146e8110aeebe46f591cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/akbarjoudi/yii2-app-vue/zipball/c4ea332828b35d9e5fb146e8110aeebe46f591cc",
+                "reference": "c4ea332828b35d9e5fb146e8110aeebe46f591cc",
+                "shasum": ""
+            },
+            "require": {
+                "aki/yii2-vue": "*",
+                "php": ">=5.6.0",
+                "yiisoft/yii2": "~2.0.14",
+                "yiisoft/yii2-bootstrap": "~2.0.0",
+                "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.0",
+                "codeception/module-asserts": "^1.0.0",
+                "codeception/module-filesystem": "^1.0.0",
+                "codeception/module-yii2": "^1.0.0",
+                "codeception/specify": "~0.4.6",
+                "codeception/verify": "~0.5.0 || ~1.1.0",
+                "symfony/browser-kit": ">=2.7 <=4.2.4",
+                "yiisoft/yii2-debug": "~2.1.0",
+                "yiisoft/yii2-faker": "~2.0.0",
+                "yiisoft/yii2-gii": "~2.1.0"
+            },
+            "type": "project",
+            "extra": {
+                "yii\\composer\\Installer::postCreateProject": {
+                    "setPermission": [
+                        {
+                            "runtime": "0777",
+                            "web/assets": "0777",
+                            "yii": "0755"
+                        }
+                    ]
+                },
+                "yii\\composer\\Installer::postInstall": {
+                    "generateCookieValidationKey": [
+                        "config/web.php"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Yii 2 Basic Project Template width VueJs",
+            "homepage": "http://www.yiiframework.com/",
+            "keywords": [
+                "basic",
+                "framework",
+                "project template",
+                "vuejs",
+                "yii2",
+                "yii2-vuejs"
+            ],
+            "support": {
+                "forum": "http://www.yiiframework.com/forum/",
+                "irc": "irc://irc.freenode.net/yii",
+                "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+                "source": "https://github.com/yiisoft/yii2",
+                "wiki": "http://www.yiiframework.com/wiki/"
+            },
+            "time": "2020-07-26T11:44:08+00:00"
+        },
+        {
+            "name": "aki/yii2-vue",
+            "version": "0.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/akbarjoudi/yii2-vue.git",
+                "reference": "c7b1f8f8d67965a5410a5d51858ce6ddb5544dfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/akbarjoudi/yii2-vue/zipball/c7b1f8f8d67965a5410a5d51858ce6ddb5544dfc",
+                "reference": "c7b1f8f8d67965a5410a5d51858ce6ddb5544dfc",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/axios": "*",
+                "bower-asset/vue": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "aki\\vue\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "akbar joudi",
+                    "email": "akbar.joody@gmail.com"
+                }
+            ],
+            "description": "for yii2 web application ",
+            "keywords": [
+                " akbar-joudi",
+                " vue.js",
+                " vuejs",
+                " yii2",
+                " yii2-vue",
+                "vue",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/akbarjoudi/yii2-vue/issues",
+                "source": "https://github.com/akbarjoudi/yii2-vue/tree/0.6.2"
+            },
+            "time": "2020-03-21T10:33:01+00:00"
+        },
+        {
+            "name": "bower-asset/axios",
+            "version": "v0.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/axios/axios.git",
+                "reference": "94ca24b5b23f343769a15f325693246e07c177d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axios/axios/zipball/94ca24b5b23f343769a15f325693246e07c177d2",
+                "reference": "94ca24b5b23f343769a15f325693246e07c177d2"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.4.1",
@@ -78,6 +220,21 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bestiejs/punycode.js/zipball/38c8d3131a82567bfef18da09f7f4db68c84f8a3",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
+            },
+            "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/vue",
+            "version": "v2.6.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vuejs/vue.git",
+                "reference": "bb253db0b3e17124b6d1fe93fbf2db35470a1347"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vuejs/vue/zipball/bb253db0b3e17124b6d1fe93fbf2db35470a1347",
+                "reference": "bb253db0b3e17124b6d1fe93fbf2db35470a1347"
             },
             "type": "bower-asset"
         },
@@ -1390,16 +1547,16 @@
         },
         {
             "name": "codeception/lib-innerbrowser",
-            "version": "1.3.6",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-innerbrowser.git",
-                "reference": "41b79ba6761001bdb1f373a347400180693ad4e7"
+                "reference": "b7406c710684c255d9b067d7795269a5585a0406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/41b79ba6761001bdb1f373a347400180693ad4e7",
-                "reference": "41b79ba6761001bdb1f373a347400180693ad4e7",
+                "url": "https://api.github.com/repos/Codeception/lib-innerbrowser/zipball/b7406c710684c255d9b067d7795269a5585a0406",
+                "reference": "b7406c710684c255d9b067d7795269a5585a0406",
                 "shasum": ""
             },
             "require": {
@@ -1444,9 +1601,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/lib-innerbrowser/issues",
-                "source": "https://github.com/Codeception/lib-innerbrowser/tree/1.3.6"
+                "source": "https://github.com/Codeception/lib-innerbrowser/tree/1.4.0"
             },
-            "time": "2021-01-17T11:21:09+00:00"
+            "time": "2021-01-29T18:17:25+00:00"
         },
         {
             "name": "codeception/module-asserts",
@@ -5240,9 +5397,7 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "php": ">=5.6.0"
-    },
+    "platform": [],
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
 }
