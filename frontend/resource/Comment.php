@@ -9,6 +9,18 @@ class Comment extends \common\models\Comment
         return ['id', 'title', 'body'];
     }
 
+    public function extraFields()
+    {
+        return ['post'];
+    }
 
-
+        /**
+     * Gets query for [[Post]].
+     *
+     * @return \yii\db\ActiveQuery|\common\models\query\PostQuery
+     */
+    public function getPost()
+    {
+        return $this->hasOne(Post::class, ['id' => 'post_id']);
+    }
 }
