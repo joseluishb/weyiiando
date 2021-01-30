@@ -6,7 +6,7 @@ class Comment extends \common\models\Comment
 
     public function fields()
     {
-        return ['id', 'title', 'body'];
+        return ['id', 'title', 'body','post_id'];
     }
 
     public function extraFields()
