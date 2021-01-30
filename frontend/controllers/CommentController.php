@@ -22,7 +22,7 @@ class CommentController extends ActiveController
     public function prepareDataProvider()
     {
         return new ActiveDataProvider([
-            'query' => Comment::find()->andWhere(['post_id' => \Yii::$app->request->get('postId')])
+            'query' => $this->modelClass::find()->andWhere(['post_id' => \Yii::$app->request->get('postId')])
         ]);
     }
 }
