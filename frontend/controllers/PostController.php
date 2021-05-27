@@ -8,4 +8,11 @@ use yii\rest\ActiveController;
 class PostController extends ActiveController
 {
     public $modelClass  = Post::class;
+
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        
+        return $behaviors;
+    }
 }
